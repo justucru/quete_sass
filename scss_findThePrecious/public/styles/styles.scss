@@ -1,0 +1,84 @@
+/* variables */
+$bg-color: #ff6c00;
+$text-color: white;
+$font: "Times New Roman", serif;
+
+/* mixins */
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin ring($size, $color) {
+  height: $size;
+  width: $size;
+  border-radius: $size;
+  border: $size/10 solid $color;
+  box-shadow: inset 3px 3px 3px darken($color, 20), 3px 3px 3px darken($color, 20);
+}
+
+/* styling */
+html, body {
+  height: 100%;
+  @include flex(column, space-between, space-between)
+}
+
+header {
+  background: $bg-color;
+  border: solid 1px black;
+}
+
+main {
+  @include flex(column, space-around, center);
+  flex: 1 0 auto;
+  background: beige;
+  color: black;
+  font: 1.8em $font;
+}
+
+.ring-row {
+  @include flex(row, space-between, center);
+  > p {
+    margin: 10px;
+  }
+}
+
+.small-rings {
+  @include ring(50px, $bg-color);
+  background-color: none;
+  margin: 10px;
+}
+
+.big-ring{
+  @include ring(200px, gold);
+  background-color: none;
+  margin: 10px;
+ }
+
+.ring-col {
+  @include flex(column, space-between, center);
+  > p {
+    margin: 10px;
+  }
+}
+
+.ring-chain-container {
+  @include flex(row, space-between, center);
+  @for $i from 1 through 6 {
+    div:nth-child(#{$i}) {
+      @include ring($i*15px, black);
+      background-color: none;
+      margin: 10px $i*-3px;
+    }
+  }
+}
+
+footer {
+  @include flex(row, space-between, flex-start);
+  flex-shrink: 0;
+  background: $bg-color;
+  color: $text-color;
+  border: solid 1px black;
+}

@@ -1,0 +1,140 @@
+/* variables */
+/* mixins */
+/* styling */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
+header {
+  background: #ff6c00;
+  border: solid 1px black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 0 auto;
+  background: beige;
+  color: black;
+  font: 1.8em "Times New Roman", serif;
+}
+
+.ring-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.ring-row > p {
+  margin: 10px;
+}
+
+.small-rings {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: 5px solid #ff6c00;
+  box-shadow: inset 3px 3px 3px #994100, 3px 3px 3px #994100;
+  background-color: none;
+  margin: 10px;
+}
+
+.big-ring {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  border: 20px solid gold;
+  box-shadow: inset 3px 3px 3px #998100, 3px 3px 3px #998100;
+  background-color: none;
+  margin: 10px;
+}
+
+.ring-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.ring-col > p {
+  margin: 10px;
+}
+
+.ring-chain-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.ring-chain-container div:nth-child(1) {
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  border: 1.5px solid black;
+  box-shadow: inset 3px 3px 3px black, 3px 3px 3px black;
+  background-color: none;
+  margin: 10px -3px;
+}
+.ring-chain-container div:nth-child(2) {
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  border: 3px solid black;
+  box-shadow: inset 3px 3px 3px black, 3px 3px 3px black;
+  background-color: none;
+  margin: 10px -6px;
+}
+.ring-chain-container div:nth-child(3) {
+  height: 45px;
+  width: 45px;
+  border-radius: 45px;
+  border: 4.5px solid black;
+  box-shadow: inset 3px 3px 3px black, 3px 3px 3px black;
+  background-color: none;
+  margin: 10px -9px;
+}
+.ring-chain-container div:nth-child(4) {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  border: 6px solid black;
+  box-shadow: inset 3px 3px 3px black, 3px 3px 3px black;
+  background-color: none;
+  margin: 10px -12px;
+}
+.ring-chain-container div:nth-child(5) {
+  height: 75px;
+  width: 75px;
+  border-radius: 75px;
+  border: 7.5px solid black;
+  box-shadow: inset 3px 3px 3px black, 3px 3px 3px black;
+  background-color: none;
+  margin: 10px -15px;
+}
+.ring-chain-container div:nth-child(6) {
+  height: 90px;
+  width: 90px;
+  border-radius: 90px;
+  border: 9px solid black;
+  box-shadow: inset 3px 3px 3px black, 3px 3px 3px black;
+  background-color: none;
+  margin: 10px -18px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background: #ff6c00;
+  color: white;
+  border: solid 1px black;
+}
+
+/*# sourceMappingURL=styles.css.map */
